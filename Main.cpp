@@ -6,7 +6,7 @@
 // run file by calling the name
 
 #include <iostream> //Libary for in out stream for printing text 
-//#include <string>
+#include <string>
 using namespace std; //Dont need to type std::
 
 int main()
