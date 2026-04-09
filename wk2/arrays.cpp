@@ -24,10 +24,6 @@ int main()
     {
         std::cout << "Add your name\n";
         std::cin >> input;
-        // if(input == "done")
-        // {
-        //     break;
-        // }
         names[i] = input;
     }
 
