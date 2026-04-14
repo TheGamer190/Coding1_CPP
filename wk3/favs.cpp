@@ -55,6 +55,7 @@ int main()
         }
         else if (input == "show")
         {
+            sort(favoriteGames.begin(), favoriteGames.end());
             for(int i = 0; i < favoriteGames.size(); i++)
             {
                 cout << i + 1 << ". " << favoriteGames[i] << endl;
