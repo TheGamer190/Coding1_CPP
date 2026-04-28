@@ -24,6 +24,21 @@ int main()
             getline(cin, input);
             favoriteGames.push_back(input);
         }
+        else if (input == "bulk add")
+        {
+            cout << "Enter as many games as you want. Type 'Done' to finish.\n";
+            while(true)
+            {
+                getline(cin, input);
+                if(input != "Done")
+                {
+                    favoriteGames.push_back(input);
+                }
+                else{
+                    break;
+                }
+            }
+        }
         else if (input == "edit")
         {
             cout << "Choose a game to edit: \n";
