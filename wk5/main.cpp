@@ -70,6 +70,9 @@ public:
         }
         bordeom = givenBoredom;
     }
+    void ChangeCharge(int amount){
+        SetCharge(charge += amount);
+    }
     int GetBoredom(){
         return bordeom;
     }
@@ -81,23 +84,20 @@ int main()
     int turns = 0;
 
     robot r2d2{"R2-D2", 100, 10};
-    robot c3po;
-    c3po.SetName("C-3PO");
-    c3po.SetCharge(20);
-    c3po.SetBoredom(5);
+    robot c3po{"C-3PO", 20, 5};
     c3po.Status();
 
-    // r2d2.Status();
-    // c3po.Status();
+    cout << r2d2.GetCharge() << endl;
+    cout << c3po.GetCharge() << endl;
 
-    // while(c3po.charge < 60)
-    // {
-    //     r2d2.charge--;
-    //     c3po.charge++;
-    // }
-    // cout << "New charge:\n";
-    // r2d2.Status();
-    // c3po.Status();
+    while(c3po.GetCharge() < 60)
+    {
+        r2d2.ChangeCharge(-1);
+        c3po.ChangeCharge(1);
+    }
+    cout << "New charge:\n";
+    cout << r2d2.GetCharge() << endl;
+    cout << c3po.GetCharge() << endl;
 
     while(true){
         while(turns < 3){
