@@ -287,7 +287,6 @@ void PrintTeamNames(const vector<Pokemon>& team) {
 int main() {
     srand((time(0)));
     GetRandomNames(randomNames);
-
     vector<Pokemon> team(3);
     
     string input;
